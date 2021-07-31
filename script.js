@@ -1,3 +1,11 @@
+// "Newton School MINI Project"
+/*
+    Author: Aniket Waliyan
+    Batch: Chrome
+    Date: 31/07/2021
+    Mentor: Rajat Gupta
+*/
+
 const calculator = {
 	displayValue: '0',
 	firstOperand: null,
