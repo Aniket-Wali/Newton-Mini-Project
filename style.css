@@ -13,6 +13,7 @@ html {
 
 body {
 	font-family: "Roboto", sans-serif;
+    background-color: rgb(32, 32, 32);
 }
 
 .calculator {
@@ -25,9 +26,10 @@ body {
 }
 .screen{
     width: 100%;
-    font-size: 96px;
+    max-width: 1200px;
+    font-size: calc(30px + (24 - 18)*(100vw - 400px)/(1200 - 400));
     letter-spacing: 0.2px;
-    height: 80px;
+    height: 100px;
     border: none;
     background-color: #000;
     color: #fff;
