@@ -6,7 +6,8 @@ const calculator = {
 };
 
 function inputDigit(digit) {
-	let { displayValue, awaitSecondOperand } = calculator;
+    let displayValue  = calculator.displayValue;
+    let awaitSecondOperand = calculator.awaitSecondOperand;
 
 	if (awaitSecondOperand === true) {
 		calculator.displayValue = digit
@@ -17,7 +18,7 @@ function inputDigit(digit) {
 }
 
 function deleteKey() {
-	let { displayValue } = calculator;
+    let displayValue  = calculator.displayValue;
 	let buffer = displayValue;
 
 	if (buffer.length === 1) {
@@ -32,7 +33,9 @@ function deleteKey() {
 }
 
 function handleOperator(nextOperator) {
-	let { firstOperand, displayValue, operator } = calculator;
+    let firstOperand = calculator.firstOperand;
+    let displayValue = calculator.displayValue;
+    let operator = calculator.operator;
 	const inputValue = parseInt(displayValue);
 
 	if (operator && calculator.waitingForSecondOperand) {
@@ -83,7 +86,7 @@ updateDisplay();
 
 const keys = document.querySelector('.keys');
 keys.addEventListener('click', event => {
-	const { target } = event;
+    const target = event.target;
 	if (!target.matches('button')) {
 		return;
 	}
